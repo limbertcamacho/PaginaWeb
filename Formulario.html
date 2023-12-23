@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Estilos.css">
+    <title> IndexedDB ¿Cómo leer OBJETOS almacenados? </title>
+</head>
+<body>
+
+    <section>
+        <div class="encabezado">
+            <did class="hijo-encabezado">
+                <div class="texto-encabezado">
+                    IndexedDB  Resgistrar Personal Administrativo
+                </div>
+            </did>
+        </div>
+
+
+         <div id="caja-padre">
+
+            <div class="cont-form">
+                <form id="formulario">
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre " required>
+                    <input type="text" id="id" placeholder="Ingrese su numero de CI">
+                    <input type="text" id="edad" placeholder="Ingrese su numero Cel">
+                 </form>
+            </div>
+
+            <div class="cont-boton">
+            <form>
+                <label for="btn-guardar">
+                    <div class="padre-boton">
+                        <input type="button" id="btn-guardar" value="Guardar">
+                        <!-- mi modificacion-->
+                    </div>
+                </label>
+            </form>
+
+            </div>
+
+        </div>
+
+        <div class="cont-lista-contactos">
+            <div class="texto-encabezado">
+                Mostrar Lista de Contactos
+            </div>
+
+            <div class="caja-contactos">
+                Aún no hay Contactos.
+            </div>
+        </div>
+    </section>
+
+    <script src="js/BaseDeDatos.js"></script>
+
+    <script>
+        var Boton = document.querySelector("#btn-guardar");
+        var PadreBoton = document.querySelector(".padre-boton");
+
+        function Animacion()
+          {
+             Boton.classList.add("animacion");
+             PadreBoton.classList.add("color");
+
+             setTimeout(() => {
+                Boton.classList.remove("animacion");
+                PadreBoton.classList.remove("color")
+            }, 600);
+          }
+        Boton.addEventListener("click", Animacion);
+    </script>
+
+</body>
+</html>

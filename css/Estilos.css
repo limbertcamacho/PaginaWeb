@@ -1,0 +1,308 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #BBBBBB;
+    font-weight: 900;
+    font-style: italic;
+}
+
+:root
+{
+  --Fondo: #282828;
+  --Sombra-Clara: #303030;
+  --Sombra-Oscura: #212121;
+
+  --Sombra-Afuera: 5px 5px 10px var(--Sombra-Oscura),
+                  -5px -5px 10px var(--Sombra-Clara);
+
+  --Sombra-Ambas: inset 5px 5px 10px var(--Sombra-Oscura),
+                  inset -5px -5px 10px var(--Sombra-Clara),
+                         3px 3px 6px var(--Sombra-Oscura),
+                        -3px -3px 6px var(--Sombra-Clara);
+
+
+
+}
+
+
+/* - ELEMENTOS FLEXIBLES--------------------------------------- */
+body,
+.hijo-encabezado,
+.hijo-encabezado .texto-encabezado,
+#caja-padre, .cont-form, .cont-boton,
+#formulario,
+.cont-lista-contactos
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* - ELEMENTOS FLEXIBLES--------------------------------------- */
+
+
+body
+ {
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--Fondo);
+ }
+
+body section
+{
+  max-width: 1200px;
+}
+
+.encabezado
+{
+  margin-bottom: 50px;
+  padding: 7px;
+  border-radius: 100px;
+  background-color: #49E9F5 ;
+  box-shadow:  10px 10px 20px var(--Sombra-Oscura),
+  -10px -10px 20px var(--Sombra-Clara);
+}
+
+.hijo-encabezado
+ {
+   width: 1000px;
+   padding: 20px;
+   background-color: var(--Fondo);
+   border-radius: 100px;
+   border: 10px solid var(--Fondo);
+   box-shadow: inset 3px 3px 5px var(--Sombra-Oscura),
+              inset -3px -3px 5px var(--Sombra-Clara);
+ }
+
+.texto-encabezado 
+{
+  width: fit-content;
+  padding: 20px 40px;
+  font-size: 24px;
+  border-radius: 100px;
+  background-color: var(--Fondo);
+  box-shadow: var(--Sombra-Afuera)
+}
+
+#caja-padre, .cont-form, .cont-boton, .cont-lista-contactos,.caja-contactos
+
+ {
+   align-content: center;
+   flex-wrap: wrap;
+   gap: 2%;
+   width: 1000px;
+   margin: 5px;
+   border: 6px solid var(--Fondo);
+   border-radius: 50px;
+   padding: 20px 15px;
+   background-color: var(--Fondo);
+   box-shadow: var(--Sombra-Ambas)
+ }
+
+
+
+.cont-form, .cont-boton
+ {
+   width: 450px;
+ }
+
+#formulario 
+{
+   align-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+#formulario input[type="text"], #btn-guardar
+{
+  width: 300px;
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  color: #BBBBBB;
+  text-align: center;
+  outline: none;
+  box-shadow: inset 3px 3px 6px var(--Sombra-Oscura),
+              inset -3px -3px 6px var(--Sombra-Clara),
+                     0px 0px 0px transparent,
+                     0px 0px 0px transparent;
+  background-color: var(--Fondo);
+  transition: box-shadow 0.5s ease 0s;
+}
+#formulario input[type="text"], .btn-actualizar
+{
+  width: 300px;
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  color: #BBBBBB;
+  text-align: center;
+  outline: none;
+  box-shadow: inset 3px 3px 6px var(--Sombra-Oscura),
+              inset -3px -3px 6px var(--Sombra-Clara),
+                     0px 0px 0px transparent,
+                     0px 0px 0px transparent;
+  background-color: var(--Fondo);
+  transition: box-shadow 0.5s ease 0s;
+}
+
+
+::placeholder
+{
+  color: #bbbbbb6e;
+}
+
+#formulario input[type="text"]:hover,
+#formulario input[type="text"]:focus
+{
+  box-shadow: inset 0px 0px 0px transparent,
+              inset 0px 0px 0px transparent,
+                     3px 3px 6px var(--Sombra-Oscura),
+                     -3px -3px 6px var(--Sombra-Clara);
+}
+
+.cont-boton
+{
+   box-shadow: none;
+}
+
+.cont-boton label 
+{
+  border-radius: 50%;
+  box-shadow:  10px 10px 20px var(--Sombra-Oscura),
+               -10px -10px 20px var(--Sombra-Clara);
+
+}
+
+.cont-boton label div
+{
+  padding: 7px;
+  border-radius: 50%;
+  background-color: #49E9F5 ;
+  transition: background-color 0.5s ease-out;
+}
+
+#btn-guardar
+{
+  width: 150px;
+  height: 150px;
+  border: 10px solid var(--Fondo);
+  border-radius: 50%;
+  box-shadow: inset 3px 3px 5px var(--Sombra-Oscura),
+              inset -3px -3px 5px var(--Sombra-Clara);
+        
+cursor: pointer;
+
+}
+
+
+
+.btn-actualizar {
+    /* Tus estilos aquí */
+    width: 150px;
+  height: 150px;
+  border: 10px solid var(--Fondo);
+  border-radius: 50%;
+  box-shadow: inset 3px 3px 5px var(--Sombra-Oscura),
+              inset -3px -3px 5px var(--Sombra-Clara);
+}
+/*
+.btn-actualizar:hover {
+    background-color: #2980b9;
+}*/
+
+
+
+
+.animacion
+{
+  animation: achicar .6s ease-in 1;
+}
+
+.cont-boton label div.color
+{
+  background-color: #DF12F4;
+}
+
+@keyframes achicar {
+  50%
+    {
+       transform: scale(0.98, 0.98);
+    }
+}
+
+.cont-lista-contactos
+{
+  gap: 20px;
+  margin: 40px 0px;
+  text-align: center;
+}
+
+.caja-contactos
+{
+  width: 100%;
+}
+
+.caja-contactos div
+{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.btn-editar {
+    /* Tus estilos aquí */
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 1px 2px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    
+    align-content: center;
+   flex-wrap: wrap;
+   gap: 1%;
+   width: 150px;
+   margin: 5px;
+   border: 6px solid var(--Fondo);
+   border-radius: 30px;
+   padding: 5px 5px;
+   background-color: var(--Fondo);
+   box-shadow: var(--Sombra-Ambas);
+}
+
+.btn-editar:hover {
+    background-color: #647172;
+}
+
+.btn-borrar {
+    /* Tus estilos aquí */
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 1px 2px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    
+    
+    align-content: center;
+   flex-wrap: wrap;
+   gap: 1%;
+   width: 150px;
+   margin: 5px;
+   border: 6px solid var(--Fondo);
+   border-radius: 30px;
+   padding: 5px 5px;
+   background-color: var(--Fondo);
+   box-shadow: var(--Sombra-Ambas);
+}
+
+.btn-borrar:hover {
+    background-color: #647172;
+}
